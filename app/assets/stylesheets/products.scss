@@ -51,6 +51,13 @@ main section.categories-show {
         font-size: 0.8em;
       }
 
+      aside.sold_out {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 0.8em;
+      }
+
       &:hover {
 
         border-color: #999;

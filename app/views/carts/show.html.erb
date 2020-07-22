@@ -1,9 +1,9 @@
 <section class="cart-show">
 
   <header class="page-header">
+    <% if cart_subtotal_cents > 0 %>
     <h1>My Cart</h1>
   </header>
-
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -20,6 +20,9 @@
           <%= render 'item', product: item[:product], quantity: item[:quantity].to_i %>
           
         <% end %>
+        
+
+
       </tbody>
       <tfoot>
       
@@ -33,6 +36,7 @@
         </tr>
       </tfoot>
     </table>
+   
   </div>
 
   <div class="row">
@@ -50,6 +54,11 @@
         </script>
       <% end %>
     </div>
+     <% else %>
+        <div class="alert" role="alert" style="background-color: #AA4342; color: white; height: 15vh; display: flex; justify-content: center; align-items: center; font-size: 150%">
+          <span><strong>Your Cart is empty!</strong> Click <%= link_to 'here', :root %> to continue shopping.</span>
+        </div>
+        <% end %>
   </div>
 
 </section>
