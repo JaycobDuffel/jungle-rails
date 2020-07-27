@@ -1,5 +1,5 @@
 
 <div class="alert" role="alert" style="background-color: #AA4342; color: white; height: 15vh; display: flex; flex-direction: row; justify-content: space-evenly; align-items: center; font-size: 150%">
   <span><%= link_to 'Product Count', [:admin, :products], style: "color: #c1bfbf;"%>:  <%= @product_count %> </span>
-  <span>Category Count: <%= @category_count %> </span>
+  <span><%= link_to 'Category Count', [:admin, :categories], style: "color: #c1bfbf;"%>: <%= @category_count %> </span>
 </div>
