@@ -71,11 +71,6 @@ ActiveRecord::Schema.define(version: 20200723171057) do
     t.datetime "updated_at",      null: false
   end
 
-  create_table "widgets", force: :cascade do |t|
-    t.integer "user_id"
-    t.string  "name",    limit: 255, null: false
-  end
-
   add_foreign_key "line_items", "orders"
   add_foreign_key "line_items", "products"
   add_foreign_key "products", "categories"
