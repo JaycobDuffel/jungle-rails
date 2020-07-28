@@ -22,11 +22,11 @@ RSpec.feature "Product Deatils", type: :feature, js: true do
     # VERIFY
     expect(page).to have_css 'article.product'
     #selecting product page
-    first("article.product").find_link("Details").trigger("click")
+    first("article.product").find('button.btn-primary').trigger("click")
 
-    expect(page).to have_css 'section.products-show'
+    expect(page.find('a', text: 'My Cart (1)')).to be_present
     
-    # save_screenshot
+    save_screenshot
   end
 
 end
