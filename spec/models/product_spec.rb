@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'products_controller'
 
   RSpec.describe Product, type: :model do
 
